@@ -1,0 +1,21 @@
+body {
+   background: #cce;
+   font-family: 'Open Sans Condensed', sans-serif;
+}
+
+header{
+    background-image: url(../images/famii.jpg);
+    
+}
+
+header .texto{
+    opacity: 1;
+}
+h1{
+	text-align: center;
+    color:#000;
+    size: 200px;
+}
+
+
+

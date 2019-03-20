@@ -1,0 +1,47 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li><a href="#" ng-click="category = 'Prestación'"><h4>Prestaciones</h4></a></li>
+            <li><a href="#" ng-click="category = 'Infancia'"><h4>Infancia</h4></a></li>
+            <li><a href="#" ng-click="category = 'Familia'"><h4>Familia</h4></a></li>
+            <li><a href="#" ng-click="category = 'Paro'"> <h4>Paro y subsidio por desempleo</h4></a></li>
+            <li><a href="#" ng-click="category = 'Extraordinarias'"><h4>Ayudas Extraordinarias</h4></a></li>
+            <li><a href="#" ng-click="category = 'Beca'"> <h4>Becas para estudiantes</h4></a></li>
+            <li><a href="#" ng-click="category = 'Domiciliaria'"><h4>Teleasistencia Domiciliaria</h4></a></li>
+        </ul>
+        <div class="form-group">
+            <input type="text" class="mr-sm-2" ng-model="text "placeholder="Search.." style="margin-top:20px;margin-left: 300px">
+            <img src ="images/search.png">
+        </div>
+    </div>
+</nav>
+
+<div class="col-md-10">
+   <div class="example-animate-container" ng-repeat="grant in grants | filter:category | filter:text">
+        <div class="col-md-6">
+            <hr>
+            <h2><strong> Titulo: {{ grant.titulo }} </strong></h2>
+            <h3> Tipo: {{ grant.tipo }} </h3>
+            <h4> Objeto: {{grant.objeto}}</h4>
+            <h5> Abstract: {{ grant.abstract }}</h5>
+            <a ng-click="detailGrant(grant.id)" class="btn btn-success"> Detalle </a>
+            <a ng-click="editGrant(grant.id)" class="btn btn-small btn-primary"> Editar </a>
+            <a ng-click="deleteGrant(grant)" class="btn btn-small btn-danger">Borrar </a>
+        </div>
+    </div>
+
+    <div class="create"> 
+        <input type="button" ng-click="createNewGrant()" class="btn btn-small btn-primary" value="Dar de alta una ayuda" style="margin-left: 1000px;margin-top: 50px"/>
+    </div>
+
+</div>
+
+<div class="col-md-2" style="margin-top:60px"><!--tengo que cambiar la cuenta de twitter-->
+    <aside class="col-md-3 hidden-xs">
+        <a class="twitter-timeline" data-height="1024" href="https://twitter.com/EIT_Digital?ref_src=twsrc%5Etfw">Tweets by EIT_Digital</a>
+        <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a href="https://twitter.com/EIT_Digital?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @EIT_Digital</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+       
+    </aside>
+</div>
+

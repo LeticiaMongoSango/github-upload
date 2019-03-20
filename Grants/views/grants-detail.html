@@ -1,0 +1,93 @@
+<div class="row">
+    <div id="botones" class="col-md-6" style = "margin-left: 40px; height:0px">
+        <div class="btn-group-vertical">
+        <!--Esto es lo que tengo que enlazar con el PDF, todos los campos, lo haré con un ng-click
+        <a ng-click="detailGrant(grant.id)" class="btn btn-success">Beneficiario </a></td>-->
+            <h3><strong>SUBSIDIO PARA LIBERADOS DE PRISIÓN</strong></h3>
+            <p>Beneficiarios</p>
+            <p>Requisitos</p>
+            <p>Documentación</p>
+            <p>Plazos</p>
+            <p>Solicitud</p>
+            <a class="btn btn-primary" ng-click="gotopage(grant.url,grant.beneficiarios)"> Beneficiarios</a> 
+            <br>
+            <a class="btn btn-primary" onclick="pulsar2()"> Requisitos</a>
+            <br>
+            <a class="btn btn-primary" onclick="pulsar3()"> Documentación a presentar</a>
+            <br>
+            <a class="btn btn-primary" onclick="pulsar4()"> Plazos de presentación</a>
+            <br>
+            <a class="btn btn-primary" onclick="pulsar5()"> Solicitud</a>   
+        </div>
+    </div>
+</div>
+
+<div>
+<p>TEngo este scope {{ grant.url }} </p>
+</div>
+
+    <div id = "pdf" class="col-md-6" style="margin-left: 500px">
+        <script>
+            function gotopage(url,pagina){
+                var options={
+                    height: "500px",
+                    width:"700px",
+                    pdfOpenParams: { view: 'FitV', page: pagina}
+                };
+                alert(url+ " "+ pagina);
+                PDFObject.embed(url, "#pdf", options);
+            };
+
+            /*
+            function pulsar2(){
+                var options={
+                    height: "500px",
+                    width:"700px",
+                    pdfOpenParams: { view: 'FitV', page: '3' }
+                };
+                PDFObject.embed("https://www.boe.es/boe/dias/2016/07/28/pdfs/BOE-A-2016-7300.pdf", "#pdf",options);
+            };
+
+            function pulsar3(){
+                var options={
+                    height: "500px",
+                    width:"700px",
+                    pdfOpenParams: { view: 'FitV', page: '4' }
+                };
+                PDFObject.embed("https://www.boe.es/boe/dias/2016/07/28/pdfs/BOE-A-2016-7300.pdf", "#pdf",options);
+            };
+
+            function pulsar4(){
+                var options={
+                    height: "500px",
+                    width:"700px",
+                    pdfOpenParams: { view: 'FitV', page: '5' }
+                };
+                PDFObject.embed("https://www.boe.es/boe/dias/2016/07/28/pdfs/BOE-A-2016-7300.pdf", "#pdf",options);
+            };
+
+            function pulsar5(){
+                var options={
+                    height: "500px",
+                    width:"700px",
+                    pdfOpenParams: { view: 'FitV', page: '6' }
+                };
+                PDFObject.embed("https://www.boe.es/boe/dias/2016/07/28/pdfs/BOE-A-2016-7300.pdf", "#pdf",options);
+            };
+*/
+        </script>
+        <style>
+            .pdfobject-container { height: 500px; padding-top: 50px;}
+            .pdfobject { border: 1px solid #666; }
+        </style>
+    </div>
+    </div>
+
+
+
+
+
+
+    
+      
+    

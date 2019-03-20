@@ -1,0 +1,21 @@
+{
+  "name": "grants",
+  "version": "1.0.0",
+  "description": "aplicacion web de ayudas sociales",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "keywords": [
+    "web",
+    "ayudas",
+    "sociales"
+  ],
+  "author": "Leticia Mongo Sango",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.8.4",
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width,user-scalable=no,
+    initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"> <!--WEB RESPOSIVE-->
+    <title> CONVOCATORIAS </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <!-- <script src="https://api.highlight4.me/js/jquery.pdf-highlighter.js"></script>-->
+    <script src="js/pdfobject.js"></script>
+    <script src="js/pdfobject.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/jpg" href="images/social.png"> <!--Pone una imagen de icono de la app-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+</head>
+
+<body ng-app="grantsapp">
+    <header style="height: 150px">
+        <div class="fondo"></div>
+        <h1><a href="#grants-list" style="text-decoration: none; color: black" id="texto"><strong>Ayudas sociales, becas y prestaciones</strong> </a></h1>
+    </header>
+    
+
+    <div ng-view></div> <!-- Usamos la directiva ng-view para plasmar el contenido routeado por ngRoute o más bien, por ng-app-->
+    
+    <script src="js/grants.app.js"></script>
+    <script src="js/grants.services.js"></script>
+    <script src="js/grants.controllers.js"></script>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+   
+    <div class="col-md-10">
+        <footer id="footer-zone" class="footer-copyright blue py-3 text-center text-white">© 2018 Copyright:
+            <a class="text-white"> Property of Leticia Mongo</a>
+            <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>
+                 from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by 
+                 <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+            </div>
+    </footer>
+    </div>
+</body>
+</html>

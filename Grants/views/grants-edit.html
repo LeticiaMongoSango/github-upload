@@ -1,0 +1,144 @@
+<div class="container">
+    <h1 style="text-align: center">Editar ayuda</h1>
+
+    <form novalidate name="grantForm" class="form-horizontal">
+    <div class="col-md-6">
+        <div class="form-group">
+        <label class="control-label" for="inputName">Titulo de la ayuda</label>
+            <div class="controls">
+                <input type="text" class="form-control" id="inputName" ng-model="grant.titulo" name="fName" placeholder="Title" required/>
+                <span class="text-warning" ng-show="grantForm.fName.$dirty && grantForm.fName.$invalid">
+                    <span ng-show="grantForm.fName.$error.required">Title is required.</span>
+                </span>
+            </div>
+        </div>
+        
+        <div class="form-group"><!-- MENÚ DESPLEGABLE-->
+            <label class="control-label" for="inputType">Tipo</label>
+            <select class="form-control" id="inputType" name="type" ng-model="grant.tipo">
+                <option value="Infancia"  required>Infancia</option>
+                <option value="Familia" required>Familia</option>
+                <option value="Beca para estudiantes" required>Beca para estudiantes</option>
+                <option value="Prestacion para liberados de prision" required>Prestación para liberados de prisión</option>
+                <option value="Prestacion para desempleados" required>Prestación para desempleados</option>
+                <option value="Ayuda extraordinaria" required>Ayuda extraordinaria</option>
+                <option value="Teleasistencia domiciliaria" required>Teleasistencia domiciliaria</option>
+                <span class="text-warning" ng-show="grantForm.type.$dirty && grantForm.type.$invalid">
+                    <span ng-show="grantForm.type.$error.required">Type is required.</span>
+                </span>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="inputObject">Objeto</label>
+            <div class="controls">
+                <input type="text" class = "form-control" id="inputObject" ng-model="grant.objeto" name="object" placeholder="Object" required/>
+                <span class="text-warning" ng-show="grantForm.object.$dirty && grantForm.object.$invalid">
+                        <span ng-show="grantForm.object.$error.required">Object is required.</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="inputAbstract">Abstract</label>
+            <div class="controls">
+                <input type="text" class="form-control" id="inputAbstract" ng-model="grant.abstract" name="resumen" placeholder="Resumen" required size="100" maxlength="200"/>
+                <span class="text-warning" ng-show="grantForm.resumen.$dirty && grantForm.resumen.$invalid">
+                        <span ng-show="grantForm.resumen.$error.required">Abstract is required.</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="inputName">URL de la ayuda</label>
+            <div class="controls">
+                <input type="url" class="form-control" ng-model="grant.url" name="Url" placeholder="url" required/>
+                <br>
+                <a class="btn btn-primary" onclick="pulsar()"> Ver PDF</a> 
+                <span class="text-warning" ng-show="grantForm.Url.$dirty && grantForm.Url.$invalid">
+                    <span ng-show="grantForm.Url.$error.required">URL is required.</span>
+                    <span ng-show="grantForm.Url.$error.url"> Not valid url</span>
+                </span>
+            </div>
+        </div>
+
+        <br>
+        <h4 style="text-align: center">Enlaces al documento</h4> <!-- Debe estar enlazado al documento en sí-->
+        <div class="form-group">
+            <label class="control-label" for="inputNumber">Beneficiarios</label>
+            <div class="controls">
+                <input type="number" class="form-control" id="inputNumber" ng-model="grant.beneficiarios" name="numero" min="1" placeholder="Número Página" />
+                <span class="text-warning" ng-show="grantForm.numero.$dirty && grantForm.numero.$invalid">
+                        <span ng-show="grantForm.numero.$error.required"> Número de página es requerido.</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="inputNumber">Requisitos</label>
+            <div class="controls">
+                <input type="number" class="form-control" id="inputNumber2" ng-model="grant.requisitos" name="numero2" min="1" placeholder="Número Página" />
+                <span class="text-warning" ng-show="grantForm.numero2.$dirty && grantForm.numero2.$invalid">
+                    <span ng-show="grantForm.numero2.$error.required"> Número de página es requerido.</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="inputNumber">Documentación a presentar</label>
+            <div class="controls">
+                <input type="number" class="form-control" id="inputNumber3" ng-model="grant.documentacion" name="numero3" min="1" placeholder="Número Página" />
+                <span class="text-warning" ng-show="grantForm.numero3.$dirty && grantForm.numero3.$invalid">
+                    <span ng-show="grantForm.numero3.$error.required"> Número de página es requerido.</span>
+                </span>
+            </div>
+        </div> 
+
+        <div class="form-group">
+            <label class="control-label" for="inputNumber">Plazos de presentación</label>  
+            <div class="controls">
+                <input type="number" class="form-control" id="inputNumber4" ng-model="grant.plazos" name="numero4" min="1" placeholder="Número Página" />
+                <span class="text-warning" ng-show="grantForm.numero4.$dirty && grantForm.numero4.$invalid">
+                    <span ng-show="grantForm.numero4.$error.required"> Número de página es requerido.</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="inputNumber">Solicitud</label>     
+            <div class="controls">
+                <input type="number" class=" form-control" id="inputNumber5" ng-model="grant.solicitud" name="numero5" min="1" placeholder="Número Página" />
+                <span class="text-warning" ng-show="grantForm.numero5.$dirty && grantForm.numero5.$invalid">
+                     <span ng-show="grantForm.numero5.$error.required"> Número de página es requerido.</span>
+                </span>
+            </div>
+        </div>
+    
+        <br>
+        <div class="control-group">
+            <div class="controls">
+                <input type="button" ng-click="cancel()" class="btn btn-small btn-primary" value="Volver a la lista">
+                <input type="button" ng-click="updateGrant()" class="btn btn-small btn-primary" 
+                ng-disabled="grantForm.fName.$invalid || grantForm.type.$invalid || grantForm.object.$invalid|| grantForm.resumen.$invalid
+                || grantForm.Url.$invalid ||  grantForm.numero.$invalid || grantForm.numero2.$invalid || grantForm.numero3.$invalid
+                || grantForm.numero4.$invalid  || grantForm.numero5.$invalid" value="Guardar">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-1"></div> <!--Espacio horizontal entre el formulario y el pdf-->
+
+    <div id="pdf" class="col-md-5" style="margin-top: 400px">
+            <script>
+                function pulsar(){
+                var options={
+                    height: "500px",
+                    width:"700px",
+                    pdfOpenParams: { view: 'FitV'}
+                };
+                PDFObject.embed("https://www.boe.es/boe/dias/2016/07/28/pdfs/BOE-A-2016-7300.pdf", "#pdf", options); //tendria que poner scope.grant(servicio)
+            };
+            </script>             
+    </div>
+    </form>
+</div>
